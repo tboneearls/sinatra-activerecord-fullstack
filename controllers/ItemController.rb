@@ -15,4 +15,14 @@ class ItemController < ApplicationController
 		@buttontext = "Add Item"
 		erb :add_item
 	end
+
+	# create route
+	post '/' do
+		# params are in a hash called params, check your terminal
+	    # extra puts statements help you find this output amongst the very verbose terminal output
+	    puts "HERE IS THE PARAMS---------------------------------------"
+	    pp params
+	    puts "---------------------------------------------------------"
+	    "you posted. check your terminal."
+	end
 end
