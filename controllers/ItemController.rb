@@ -7,6 +7,12 @@ class ItemController < ApplicationController
 
 	# add route
 	get '/add' do
+		@page = "Add Item"
+		@action = "/items"
+		@method = "POST"
+		@placeholder = "Enter your Item!"
+		@value = ""
+		@buttontext = "Add Item"
 		erb :add_item
 	end
 end
