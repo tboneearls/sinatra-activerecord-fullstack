@@ -1,3 +1,5 @@
+require './controllers/ApplicationController.rb'
+
 class ItemController < ApplicationController
 
 	# index route 
@@ -24,5 +26,13 @@ class ItemController < ApplicationController
 	    pp params
 	    puts "---------------------------------------------------------"
 	    "you posted. check your terminal."
+
+	    @item = Item.new
+	    @item.title = params[:title]
+	    @item.user_id = params[:user_id] # for now
+	    @item.save
+
+	    @item.to_json
+	    
 	end
 end
