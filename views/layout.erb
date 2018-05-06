@@ -12,6 +12,13 @@
 		<a href="/items/add">Add Items</a>
 	</nav>
   
+	<% if session[:message] %>
+		<p class="msg">
+		<%= session[:message] %>
+		</p>
+		<% session[:message] = nil
+	end %>
+  
   <h1 id="app-name">Awesome Site!</h1> 
 		<h1 style="border: 1px solid blue; border-radius: 10px">Awesome Item App (this h1 is in hello.erb)</h1>
 

@@ -3,6 +3,9 @@ class ApplicationController < Sinatra::Base
 	require 'bundler'
 	Bundler.require()
 
+	# this is all you need to enable a session on your app
+	enable :sessions
+
 	ActiveRecord::Base.establish_connection(
 		:adapter => 'postgresql',
 		:database => 'item'

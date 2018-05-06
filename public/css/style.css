@@ -1,5 +1,12 @@
 body {
-	background-color: #f3d460;
+	background-color: #f36;
+}
+
+/*session message*/
+p.msg {
+	background: lightgreen;
+	color: brown;
+	border: 1px solid black;
 }
 
 /* from form.erb: be sure to add this class to that form while you're deleting the inline style */
