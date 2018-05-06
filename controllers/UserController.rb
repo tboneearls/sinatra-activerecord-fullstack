@@ -12,6 +12,12 @@ class UserController < ApplicationController
 		erb :register
 	end
 
+	get '/logout' do
+		session[:username] = nil
+		session[:logged_in] = false
+		redirect '/user/login'
+	end
+
 	post '/login' do
 		@user = User.find_by(username: params[:username])
 

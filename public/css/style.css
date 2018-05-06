@@ -2,6 +2,11 @@ body {
 	background-color: #f36;
 }
 
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
 /*session message*/
 p.msg {
 	background: lightgreen;
