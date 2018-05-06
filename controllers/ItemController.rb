@@ -1,4 +1,4 @@
-require './controllers/ApplicationController.rb'
+# require './controllers/ApplicationController.rb'
 
 class ItemController < ApplicationController
 
