@@ -31,7 +31,7 @@ class ItemController < ApplicationController
 
 	    @item = Item.new
 	    @item.title = params[:title]
-	    @item.user_id = params[:user_id] # for now
+	    @item.user_id = session[:user_id]
 	    @item.save
 
 	    session[:message] = "You added item #{@item.id}."
