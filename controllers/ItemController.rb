@@ -1,4 +1,3 @@
-# require './controllers/ApplicationController.rb'
 
 class ItemController < ApplicationController
 
