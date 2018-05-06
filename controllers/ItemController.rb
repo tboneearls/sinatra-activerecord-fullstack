@@ -75,4 +75,12 @@ class ItemController < ApplicationController
 		redirect '/items'
 	end
 
+	# making sure user is logged in 
+	before do
+		if !session[:logged_in]
+			session[:message] = "You must be logged in to do that"
+			redirect '/user/login'
+		end
+	end
+
 end
