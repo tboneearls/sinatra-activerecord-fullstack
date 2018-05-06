@@ -4,7 +4,8 @@ class ItemController < ApplicationController
 
 	# index route 
 	get '/' do
-		@items = Item.all
+		@user = User.find session[:username]
+		@items = @user.items
 		@page = "Index of Items"
 		erb :item_index
 	end
