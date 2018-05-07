@@ -3,7 +3,7 @@ class ItemController < ApplicationController
 
 	# index route 
 	get '/' do
-		@user = User.find session[:username]
+		@user = User.find session[:user_id]
 		@items = @user.items
 		@page = "Index of Items"
 		erb :item_index
